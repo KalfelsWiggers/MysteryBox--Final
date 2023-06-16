@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MysteryBOX - Se Surpreenda</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="icon">
+            <a href="#destino1"><ion-icon name="home-outline"></ion-icon></a>
+        </div>
+        <div id="icon">
+            <a href="#destino2"><ion-icon name="cube-outline"></ion-icon></a>
+        </div>
+        <div id="icon">
+            <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
+            <nav id="menu">
+                <ul>
+                  <li><a id="anchor">Criar Conta</a></li>
+                </ul>
+                <nav id="menu2">
+                    <h2 id="h2UC">CriarConta</h2>
+                    <form>
+                        <label for="email2">Email:</label>
+                        <input type="email" id="email2">
+    
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senhaInput" oninput="verificarSenha()">
+    
+                        <label for="confirmSenha">Confirmar Senha:</label>
+                        <input type="password" id="senhaInput2" oninput="compararSenhas();">
+    
+                        <button id="CreateBtn">Criar</button>
+                    </form>
+                    <div id="formRow">
+                        <div>
+                            <input type="checkbox" id="check"><label for="check">Lembre de mim</label>
+                        </div>
+                        <a href="#">Entrar</a>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <main id="destino1">
+        <section>
+            <div id="name">Mystery<span>BOX</span></div>
+            <div id="txt">Se surpreenda</div>
+        </section>
+        <section>
+            <h2 id="h2UC">Receba agora nossas ofertas</h2>
+            <div id="container">
+                <label for="email">Email:</label><input type="email" id="email">
+                <button id="sendBtn">Enviar</button>
+            </div>
+        </section>
+        <section  id="destino2">
+            <h2 id="name">CAIXAS</h2>
+            <div id="productContainer">
+                <div id="cell"></div>
+                <div id="cell"></div>
+                <div id="cell"></div>
+                <div id="cell"></div>
+                <div id="cell"></div>
+                <div id="cell"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="column1">
+            <div id="fotIcons">
+                <div id="icons">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div id="column2">
+            <label for="fotBtn">Pergunte:</label>
+            <button id="fotBtn">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+            </button>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script src="main.js"></script>
+</html>
