@@ -10,7 +10,6 @@
 /* styling */
 :root{
     --clr-pri: hsl(240, 70%, 65%);
-    --clr-pri-hov: hsl(260, 70%, 70%);
     --fc-pri: hsl(255 100% 100%);
     --box-sh: 0 8px 60px hsl(0 0% 0%);
     --box-sh2: 0 8px 60px var(--clr-pri);
@@ -418,5 +417,11 @@ footer{
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
+    }
+}
+@media  screen and (max-width: 360px) {
+    #productContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1 1fr);
     }
 }
