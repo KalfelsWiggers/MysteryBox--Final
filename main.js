@@ -8,7 +8,6 @@ function Fechar(tela){
 function Abrir(tela){
   let telaProduto = document.getElementById(tela);
   telaProduto.style.scale = "1";
-  console.log(tela);
 }
 
 menuLink.addEventListener('click', function(e) {
