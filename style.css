@@ -512,7 +512,7 @@ footer{
         width: 80vmin;
     }
     .infoContainer p{
-        font-size: .8rem;
+        font-size: .9rem;
     }
     .btnRow{
         grid-template-columns: 1fr;
