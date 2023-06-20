@@ -61,12 +61,12 @@
         <section  id="destino2">
             <h2 id="name">CAIXAS</h2>
             <div id="productContainer">
-                <div id="cell"></div>
-                <div id="cell"></div>
-                <div id="cell"></div>
-                <div id="cell"></div>
-                <div id="cell"></div>
-                <div id="cell"></div>
+                <div class="cell" id="cell1" onclick="Abrir('screenProduct1');"></div>
+                <div class="cell" onclick="Abrir('screenProduct2');"></div>
+                <div class="cell" onclick="Abrir('screenProduct3');"></div>
+                <div class="cell" onclick="Abrir('screenProduct4');"></div>
+                <div class="cell" onclick="Abrir('screenProduct5');"></div>
+                <div class="cell"></div>
             </div>
         </section>
     </main>
@@ -100,6 +100,100 @@
             </button>
         </div>
     </footer>
+    <div class="infoContainer" id="screenProduct1">
+        <h3>Caixa Família</h3>
+        <div class="infoRow">
+            <div class="productImage"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
+            </p>
+        </div>
+        <div class="btnRow">
+            <button id="likeBtn">
+                <ion-icon name="heart-outline"></ion-icon>
+            </button>
+            <button id="buyBtn">Comprar</button>
+            <button id="closeBtn" onclick="Fechar('screenProduct1');">
+                Fechar
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="infoContainer" id="screenProduct2">
+        <h3>Caixa Grande</h3>
+        <div class="infoRow">
+            <div class="productImage"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
+            </p>
+        </div>
+        <div class="btnRow">
+            <button id="likeBtn">
+                <ion-icon name="heart-outline"></ion-icon>
+            </button>
+            <button id="buyBtn">Comprar</button>
+            <button id="closeBtn" onclick="Fechar('screenProduct2');">
+                Fechar
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="infoContainer" id="screenProduct3">
+        <h3>Caixa Média</h3>
+        <div class="infoRow">
+            <div class="productImage"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
+            </p>
+        </div>
+        <div class="btnRow">
+            <button id="likeBtn">
+                <ion-icon name="heart-outline"></ion-icon>
+            </button>
+            <button id="buyBtn">Comprar</button>
+            <button id="closeBtn" onclick="Fechar('screenProduct3');">
+                Fechar
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="infoContainer" id="screenProduct4">
+        <h3>Caixa Pequena</h3>
+        <div class="infoRow">
+            <div class="productImage"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
+            </p>
+        </div>
+        <div class="btnRow">
+            <button id="likeBtn">
+                <ion-icon name="heart-outline"></ion-icon>
+            </button>
+            <button id="buyBtn">Comprar</button>
+            <button id="closeBtn" onclick="Fechar('screenProduct4');">
+                Fechar
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="infoContainer" id="screenProduct5">
+        <h3>Caixa Broto</h3>
+        <div class="infoRow">
+            <div class="productImage"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
+            </p>
+        </div>
+        <div class="btnRow">
+            <button id="likeBtn">
+                <ion-icon name="heart-outline"></ion-icon>
+            </button>
+            <button id="buyBtn">Comprar</button>
+            <button id="closeBtn" onclick="Fechar('screenProduct5');">
+                Fechar
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

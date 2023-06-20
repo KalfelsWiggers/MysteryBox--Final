@@ -1,6 +1,16 @@
 const menuLink = document.getElementById('horizontalMenu');
 const menu = document.getElementById('menu');
 
+function Fechar(tela){
+  document.getElementById(tela).style.scale = "0";
+}
+
+function Abrir(tela){
+  let telaProduto = document.getElementById(tela);
+  telaProduto.style.scale = "1";
+  console.log(tela);
+}
+
 menuLink.addEventListener('click', function(e) {
   e.preventDefault();
   menu.classList.toggle('open');

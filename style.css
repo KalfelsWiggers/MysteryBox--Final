@@ -209,7 +209,7 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#cell{
+.cell{
     width: 10rem;
     height: 10rem;
     margin:  5px;
@@ -224,12 +224,12 @@ section{
     background-size: cover;
     box-shadow: var(--box-sh);
 }
-#cell:nth-child(6){
+.cell:nth-child(6){
     background: url(plus.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
-#cell:nth-child(1):after{
+.cell:nth-child(1):after{
     content: 'Caixa Família';
     position: absolute;
     border-radius: inherit;
@@ -243,7 +243,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:nth-child(2):after{
+.cell:nth-child(2):after{
     content: 'Caixa Grande';
     position: absolute;
     border-radius: inherit;
@@ -257,7 +257,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:nth-child(3):after{
+.cell:nth-child(3):after{
     content: 'Caixa Média';
     position: absolute;
     border-radius: inherit;
@@ -271,7 +271,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:nth-child(4):after{
+.cell:nth-child(4):after{
     content: 'Caixa Pequena';
     position: absolute;
     border-radius: inherit;
@@ -285,7 +285,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:nth-child(5):after{
+.cell:nth-child(5):after{
     content: 'Caixa Broto';
     position: absolute;
     border-radius: inherit;
@@ -299,7 +299,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:nth-child(6):after{
+.cell:nth-child(6):after{
     content: 'Mais em breve!';
     position: absolute;
     border-radius: inherit;
@@ -313,7 +313,7 @@ section{
     z-index: 1;
     opacity: 0;
 }
-#cell:hover::after{
+.cell:hover::after{
     opacity: 1;
 }
 
@@ -405,6 +405,105 @@ footer{
 #fotBtn:hover{
     background-color: var(--clr-pri);
     box-shadow: var(--box-sh2);
+}
+.infoContainer{
+    position: absolute;
+    width: 60vmin;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transform-origin: top left;
+    z-index: 100;
+    border-radius: 20px;
+    padding: 10px 22px;
+    text-align: center;
+    gap: 5px;
+    border: 2px solid var(--clr-pri);
+    scale: 0;
+}
+.infoContainer h3{
+    color: var(--clr-pri);
+    letter-spacing: 3px;
+    margin: 0;
+}
+.infoRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 5px;
+    text-align: left;
+    margin-top: 1rem;
+}
+.productImage{
+    width: 22vmin;
+    aspect-ratio: 5/7;
+    background: url(box.jpg) no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    border: 2px solid var(--clr-pri);
+    border-radius: 10px;
+    opacity: .9;
+}
+.infoRow p{
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0;
+}
+.btnRow{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    column-gap: 15px;
+    margin-top: 1rem;
+}
+#likeBtn{
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid hsl(0, 82%, 55%);
+    color: hsl(0, 82%, 55%);
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+#likeBtn:hover{
+    background-color: hsl(0, 82%, 55%);
+    color: white;
+    box-shadow: 0px 0px 40px hsl(0, 82%, 55%);
+}
+#buyBtn{
+    background-color: transparent;
+    color: var(--fc-pri);
+    border: 2px solid var(--clr-pri);
+    cursor: pointer;
+    font-size: .9rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#buyBtn:hover{
+    background-color: var(--clr-pri);
+    box-shadow: var(--box-sh2);
+}
+#closeBtn{
+    background-color: transparent;
+    border: 2px solid hsl(0, 82%, 55%);
+    color: hsl(0, 82%, 55%);
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#closeBtn:hover{
+    background-color: hsl(0, 82%, 55%);
+    box-shadow: 0px 0px 40px hsl(0, 82%, 55%);
+}
+#closeBtn ion-icon{
+    font-size: 1.1rem;
 }
 
 
