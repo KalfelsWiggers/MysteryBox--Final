@@ -72,17 +72,6 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-let verificarEmail = document.querySelector("#email").oninput = () => {
-  let verfificacaoEmail = verificarEmail.value;
-
-  if (isValidEmail(verfificacaoEmail)) {
-    verificarEmail.style.outlineColor = 'hsl(125 100% 40%)'; // E-mail válido, altera a cor do texto para verde
-    verificarEmail.style.color = 'hsl(125 100% 40%)';
-  } else {
-    verificarEmail.style.outlineColor = 'hsl(0 100% 50%)'; // E-mail válido, altera a cor do texto para verde
-    verificarEmail.style.color = 'hsl(0 100% 50%)';  }
-}
-
 function isValidEmail(verfificacaoEmail) {
   // Expressão regular para validar um endereço de e-mail
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
