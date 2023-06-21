@@ -228,13 +228,13 @@ section{
 .left{
     position: absolute;
     left: 2px;
-    top: calc(50% - 35px);
+    top: calc(50% - 35px / 2);
     z-index: 3;
 }
 .right{
     position: absolute;
     right: 2px;
-    top: calc(50% - 35px);
+    top: calc(50% - 35px / 2);
     z-index: 3;
 }
 
