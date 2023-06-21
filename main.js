@@ -72,10 +72,8 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-const verificarEmail = document.getElementById("email2")
-
-verificarEmail.addEventListener('input', () => {
-  const verfificacaoEmail = verificarEmail.value;
+let verificarEmail = document.querySelector("#email").oninput = () => {
+  let verfificacaoEmail = verificarEmail.value;
 
   if (isValidEmail(verfificacaoEmail)) {
     verificarEmail.style.outlineColor = 'hsl(125 100% 40%)'; // E-mail válido, altera a cor do texto para verde
@@ -83,7 +81,7 @@ verificarEmail.addEventListener('input', () => {
   } else {
     verificarEmail.style.outlineColor = 'hsl(0 100% 50%)'; // E-mail válido, altera a cor do texto para verde
     verificarEmail.style.color = 'hsl(0 100% 50%)';  }
-});
+}
 
 function isValidEmail(verfificacaoEmail) {
   // Expressão regular para validar um endereço de e-mail
