@@ -1,6 +1,33 @@
 const menuLink = document.getElementById('horizontalMenu');
 const menu = document.getElementById('menu');
 
+let slideIndex = 1
+showSlides(slideIndex);
+
+function plusSlide(n){
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  let i;
+  let slide = document.getElementsByClassName("mySlide");
+  if (n > slide.length){
+    slideIndex = 1;
+  }    
+  if (n < 1){
+    slideIndex = slide.length
+  }
+  for (i = 0; i < slide.length; i++) {
+    slide[i].style.display = "none";  
+  }
+  slide[slideIndex-1].style.display = "block";  
+}
+
+
 function Fechar(tela){
   document.getElementById(tela).style.scale = "0";
 }
@@ -28,8 +55,8 @@ anchor.addEventListener('click', function(e) {
 
 const emailInput = document.getElementById('email');
 
-emailInput.addEventListener('input', () => {
-  const email = emailInput.value;
+emailInput.addEventListener('input', () =>{
+  let email = emailInput.value;
 
   if (isValidEmail(email)) {
     emailInput.style.outlineColor = 'hsl(125 100% 40%)'; // E-mail válido, altera a cor do texto para verde
@@ -91,7 +118,6 @@ function compararSenhas(){
     senhaInput2.style.outlineColor = 'hsl(0 100% 40%)';
   }
 }
-
 
 
 

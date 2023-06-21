@@ -51,14 +51,28 @@
             <div id="name">Mystery<span>BOX</span></div>
             <div id="txt">Se surpreenda</div>
         </section>
+        <br><br>
         <section>
-            <h2 id="h2UC">Receba agora nossas ofertas</h2>
-            <div id="container">
-                <label for="email">Email:</label><input type="email" id="email">
-                <button id="sendBtn">Enviar</button>
+            <div class="slide-container">
+                <div class="bg"></div>
+                <button class="arrow left" onclick="plusSlide(-1)">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </button>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <button class="arrow right" onclick="plusSlide(1)">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
             </div>
         </section>
-        <section  id="destino2">
+        <section  id="destino2" style="position: relative;">
             <h2 id="name">CAIXAS</h2>
             <div id="productContainer">
                 <div class="cell" id="cell1" onclick="Abrir('screenProduct1');"></div>
@@ -67,6 +81,100 @@
                 <div class="cell" onclick="Abrir('screenProduct4');"></div>
                 <div class="cell" onclick="Abrir('screenProduct5');"></div>
                 <div class="cell"></div>
+            </div>
+            <div class="infoContainer" id="screenProduct1">
+                <h3>Caixa Família</h3>
+                <div class="infoRow">
+                    <div class="productImage"></div>
+                    <p>A caixa família é perfeita para uma família com fome de surpresa! <br><br> Valor: R$500,00.
+                    </p>
+                </div>
+                <div class="btnRow">
+                    <button id="likeBtn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button id="buyBtn">Comprar</button>
+                    <button id="closeBtn" onclick="Fechar('screenProduct1');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct2">
+                <h3>Caixa Grande</h3>
+                <div class="infoRow">
+                    <div class="productImage"></div>
+                    <p>A caixa Grande é perfeita para aqueles com GRANDE fome de surpresa! <br><br> Valor: R$400,00.
+                    </p>
+                </div>
+                <div class="btnRow">
+                    <button id="likeBtn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button id="buyBtn">Comprar</button>
+                    <button id="closeBtn" onclick="Fechar('screenProduct2');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct3">
+                <h3>Caixa Média</h3>
+                <div class="infoRow">
+                    <div class="productImage"></div>
+                    <p>Seu dia foi mediano? Mate sua fome e se surpreenda! <br><br> Valor: R$300,00.
+                    </p>
+                </div>
+                <div class="btnRow">
+                    <button id="likeBtn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button id="buyBtn">Comprar</button>
+                    <button id="closeBtn" onclick="Fechar('screenProduct3');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct4">
+                <h3>Caixa Pequena</h3>
+                <div class="infoRow">
+                    <div class="productImage"></div>
+                    <p>Está se sentindo pequeno? Mate agora sua fome e se surpreenda! <br><br> Valor: R$200,00. 
+                    </p>
+                </div>
+                <div class="btnRow">
+                    <button id="likeBtn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button id="buyBtn">Comprar</button>
+                    <button id="closeBtn" onclick="Fechar('screenProduct4');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct5">
+                <h3>Caixa Broto</h3>
+                <div class="infoRow">
+                    <div class="productImage"></div>
+                    <p>Está com fome porém a dúvida te assola? Experimente uma de nossas caixas e se surpreenda! <br><br> Valor: R$100,00.
+                    </p>
+                </div>
+                <div class="btnRow">
+                    <button id="likeBtn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    <button id="buyBtn">Comprar</button>
+                    <button id="closeBtn" onclick="Fechar('screenProduct5');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -100,100 +208,6 @@
             </button>
         </div>
     </footer>
-    <div class="infoContainer" id="screenProduct1">
-        <h3>Caixa Família</h3>
-        <div class="infoRow">
-            <div class="productImage"></div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
-            </p>
-        </div>
-        <div class="btnRow">
-            <button id="likeBtn">
-                <ion-icon name="heart-outline"></ion-icon>
-            </button>
-            <button id="buyBtn">Comprar</button>
-            <button id="closeBtn" onclick="Fechar('screenProduct1');">
-                Fechar
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-    </div>
-
-    <div class="infoContainer" id="screenProduct2">
-        <h3>Caixa Grande</h3>
-        <div class="infoRow">
-            <div class="productImage"></div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
-            </p>
-        </div>
-        <div class="btnRow">
-            <button id="likeBtn">
-                <ion-icon name="heart-outline"></ion-icon>
-            </button>
-            <button id="buyBtn">Comprar</button>
-            <button id="closeBtn" onclick="Fechar('screenProduct2');">
-                Fechar
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-    </div>
-
-    <div class="infoContainer" id="screenProduct3">
-        <h3>Caixa Média</h3>
-        <div class="infoRow">
-            <div class="productImage"></div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
-            </p>
-        </div>
-        <div class="btnRow">
-            <button id="likeBtn">
-                <ion-icon name="heart-outline"></ion-icon>
-            </button>
-            <button id="buyBtn">Comprar</button>
-            <button id="closeBtn" onclick="Fechar('screenProduct3');">
-                Fechar
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-    </div>
-
-    <div class="infoContainer" id="screenProduct4">
-        <h3>Caixa Pequena</h3>
-        <div class="infoRow">
-            <div class="productImage"></div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
-            </p>
-        </div>
-        <div class="btnRow">
-            <button id="likeBtn">
-                <ion-icon name="heart-outline"></ion-icon>
-            </button>
-            <button id="buyBtn">Comprar</button>
-            <button id="closeBtn" onclick="Fechar('screenProduct4');">
-                Fechar
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-    </div>
-
-    <div class="infoContainer" id="screenProduct5">
-        <h3>Caixa Broto</h3>
-        <div class="infoRow">
-            <div class="productImage"></div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ipsam beatae vitae esse dignissimos explicabo?
-            </p>
-        </div>
-        <div class="btnRow">
-            <button id="likeBtn">
-                <ion-icon name="heart-outline"></ion-icon>
-            </button>
-            <button id="buyBtn">Comprar</button>
-            <button id="closeBtn" onclick="Fechar('screenProduct5');">
-                Fechar
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
