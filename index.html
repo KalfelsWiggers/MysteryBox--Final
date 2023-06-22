@@ -82,6 +82,36 @@
                 <div class="cell" onclick="Abrir('screenProduct5');"></div>
                 <div class="cell"></div>
             </div>
+            <div class="box-1">
+                <h1>Caixa Família</h1>
+                <img>
+                <button class="confirmBuyBtn">Confirmar compra</button>
+                <button class="fecharTela" onclick="FecharTela('.box-1');">Fechar</button>
+            </div>
+            <div class="box-2">
+                <h1>Caixa Grande</h1>
+                <img>
+                <button class="confirmBuyBtn">Confirmar compra</button>
+                <button class="fecharTela" onclick="FecharTela('.box-2');">Fechar</button>
+            </div>
+            <div class="box-3">
+                <h1>Caixa Média</h1>
+                <img>
+                <button class="confirmBuyBtn">Confirmar compra</button>
+                <button class="fecharTela" onclick="FecharTela('.box-3');">Fechar</button>
+            </div>
+            <div class="box-4">
+                <h1>Caixa Pequena</h1>
+                <img>
+                <button class="confirmBuyBtn">Confirmar compra</button>
+                <button class="fecharTela" onclick="FecharTela('.box-4');">Fechar</button>
+            </div>
+            <div class="box-5">
+                <h1>Caixa Broto</h1>
+                <img>
+                <button class="confirmBuyBtn">Confirmar compra</button>
+                <button class="fecharTela" onclick="FecharTela('.box-5');">Fechar</button>
+            </div>
             <div class="infoContainer" id="screenProduct1">
                 <h3>Caixa Família</h3>
                 <div class="infoRow">
@@ -93,7 +123,7 @@
                     <button id="likeBtn">
                         <ion-icon name="heart-outline"></ion-icon>
                     </button>
-                    <button id="buyBtn">Comprar</button>
+                    <button id="buyBtn" onclick="showScreen('.box-1');">Comprar</button>
                     <button id="closeBtn" onclick="Fechar('screenProduct1');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>
@@ -112,7 +142,7 @@
                     <button id="likeBtn">
                         <ion-icon name="heart-outline"></ion-icon>
                     </button>
-                    <button id="buyBtn">Comprar</button>
+                    <button id="buyBtn" onclick="showScreen('.box-2');">Comprar</button>
                     <button id="closeBtn" onclick="Fechar('screenProduct2');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>
@@ -131,7 +161,7 @@
                     <button id="likeBtn">
                         <ion-icon name="heart-outline"></ion-icon>
                     </button>
-                    <button id="buyBtn">Comprar</button>
+                    <button id="buyBtn" onclick="showScreen('.box-3');">Comprar</button>
                     <button id="closeBtn" onclick="Fechar('screenProduct3');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>
@@ -150,7 +180,7 @@
                     <button id="likeBtn">
                         <ion-icon name="heart-outline"></ion-icon>
                     </button>
-                    <button id="buyBtn">Comprar</button>
+                    <button id="buyBtn" onclick="showScreen('.box-4');">Comprar</button>
                     <button id="closeBtn" onclick="Fechar('screenProduct4');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>
@@ -169,7 +199,7 @@
                     <button id="likeBtn">
                         <ion-icon name="heart-outline"></ion-icon>
                     </button>
-                    <button id="buyBtn">Comprar</button>
+                    <button id="buyBtn" onclick="showScreen('.box-5');">Comprar</button>
                     <button id="closeBtn" onclick="Fechar('screenProduct5');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>

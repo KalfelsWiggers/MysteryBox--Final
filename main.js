@@ -106,6 +106,22 @@ function compararSenhas(){
   }
 }
 
+const BuyButton = document.getElementById("buyBtn");
+const BotaoFechar = document.querySelector(".fecharTela")
+const Screen = document.querySelector(".buy-box-screen")
+
+function showScreen(telaCaixa){
+  let telaAberta = document.querySelector(telaCaixa)
+  telaAberta.style.scale = "1";
+  telaAberta.style.pointerEvents = "all";
+}
+
+function FecharTela(telaCaixa){
+  let telaAberta = document.querySelector(telaCaixa)
+  telaAberta.style.scale = "0";
+  telaAberta.style.pointerEvents = "none";
+}
+
 
 
 
