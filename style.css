@@ -68,7 +68,7 @@ header{
     /* white-space: nowrap; */
     display: none;
     position: absolute;
-    top: 70%;
+    top: 78%;
     width: 150px;
 
     left: calc(var(--head-w) * 1.05);
@@ -122,7 +122,7 @@ header{
 #menu2 form{
     text-align: left;
 }
-#menu2 form input, button{
+#menu2 form input, #CreateBtn{
     width: 100%;
     height: 1.75rem;
     border: none;
@@ -131,14 +131,14 @@ header{
 #menu2 input{
     padding-left: 5px;
 }
-#menu2 button{
+#menu2 #CreateBtn{
     margin-top: .75rem;
     color: var(--fc-pri);
     background-color: transparent;
     border: 2px solid var(--clr-pri);
     font-size: .9em;
 }
-#menu2 button:hover{
+#menu2 #CreateBtn:hover{
     background-color: var(--clr-pri);
     box-shadow: var(--box-sh2);
 }
@@ -187,6 +187,7 @@ section{
     position: relative;
     border: 2px solid var(--clr-pri);
     border-radius: 1rem;
+    overflow: hidden;
 }
 .slide-container .bg{
     position: absolute;
@@ -205,6 +206,10 @@ section{
     object-fit: cover;
     margin-bottom: -7px;
     border-radius: 1rem;
+}
+@keyframes fade {
+    0%{transform: translateX(10px); opacity: .9;}
+    100%{transform: translateX(0); opacity: 1;}
 }
 .arrow{
     width: 35px;
@@ -487,29 +492,16 @@ footer{
 }
 .btnRow{
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
-    column-gap: 15px;
+    grid-template-rows: repeat(2 1fr);
+    row-gap: 15px;
     margin-top: 1rem;
 }
-#likeBtn{
-    text-align: center;
-    background-color: transparent;
-    border: 2px solid hsl(0, 82%, 55%);
-    color: hsl(0, 82%, 55%);
-    font-size: 1.2rem;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-}
-#likeBtn:hover{
-    background-color: hsl(0, 82%, 55%);
-    color: white;
-    box-shadow: 0px 0px 40px hsl(0, 82%, 55%);
-}
+
 #buyBtn{
     background-color: transparent;
     color: var(--fc-pri);
     border: 2px solid var(--clr-pri);
+    border-radius: 1rem;
     cursor: pointer;
     font-size: .9rem;
 
@@ -531,6 +523,7 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    border-radius: 1rem;
 }
 #closeBtn:hover{
     background-color: hsl(0, 82%, 55%);
@@ -568,55 +561,4 @@ footer{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1 1fr);
     }
-}
-
-/*buy box screen*/
-
-.box-1, .box-2, .box-3, .box-4, .box-5{
-    position: absolute;
-    width: 60vmin;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: top left;
-    background-color: hsla(0 0% 0%);
-    z-index: 1000;
-    display: grid;
-    place-items: center;
-    place-content: center;
-    text-align: center;
-    /* transform: translateY(-153.5vh); */
-    scale: 0;
-    pointer-events: none;
-    padding: 10px 22px;
-    border-radius: 1rem;
-    box-shadow: 0 0 40px hsl(15 100% 50%);
-}
-
-.box-1 img, .box-2 img, .box-3 img, .box-4 img, .box-5 img{
-    width: 30vmin;
-    aspect-ratio: 5/7;
-    background: url(box.jpg) no-repeat;
-    background-size: 100% 100%;
-    object-fit: cover;
-}
-.confirmBuyBtn, .fecharTela{
-    width: 45vmin;
-    height: 2rem;
-    margin-top: 1rem;
-    padding: 8px 12px;
-    color: var(--fc-pri);
-    background-color: transparent;
-    border: 2px solid hsl(15 100% 50%);
-    display: grid;
-    place-content: center;
-    font-size: .9rem;
-}
-.confirmBuyBtn:hover,
-.confirmBuyBtn:focus,
-.fecharTela:hover,
-.fecharTela:focus{
-    box-shadow: 0 0.5em 0.5em -0.4em hsl(15 100% 50%);
-  transform: translateY(-0.25em);
-  background-color: hsl(15 100% 50%);
 }

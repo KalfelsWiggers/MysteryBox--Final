@@ -17,36 +17,16 @@
             <a href="#destino2"><ion-icon name="cube-outline"></ion-icon></a>
         </div>
         <div id="icon">
-            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            <a href="#!"><ion-icon name="cart-outline"></ion-icon></a>
         </div>
         <div id="icon">
             <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
             <nav id="menu">
-                <ul>
-                  <li><a id="anchor">Criar Conta</a></li>
+                <ul style="font-size: 1.1em;">
+                  <li><a>Opções</a></li>
+                  <li><a>Pagamento</a></li>
+                  <li><a id="sair" href="index.html">Sair</a></li>
                 </ul>
-                <nav id="menu2">
-                    <h2 id="h2UC">CriarConta</h2>
-                    <form method="POST" action="crud.php">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
-    
-                        <label for="senhaInput">Senha:</label>
-                        <input type="password" id="senhaInput" name="senha" oninput="verificarSenha()">
-    
-                        <label for="senhaInput2">Confirmar Senha:</label>
-                        <input type="password" id="senhaInput2" oninput="compararSenhas();">
-                        
-                        <input type="submit" value="Criar" id="CreateBtn" name="submit">
-                        <!-- <button id="CreateBtn">Criar</button> -->
-                    </form>
-                    <div id="formRow">
-                        <div>
-                            <input type="checkbox" id="check"><label for="check">Lembre de mim</label>
-                        </div>
-                        <a href="#">Entrar</a>
-                    </div>
-                </nav>
             </nav>
         </div>
     </header>

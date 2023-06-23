@@ -22,7 +22,8 @@ function showSlides(n){
     slideIndex = slide.length
   }
   for (i = 0; i < slide.length; i++) {
-    slide[i].style.display = "none";  
+    slide[i].style.display = "none";
+    slide[i].style.animation = "fade 200ms ease"  
   }
   slide[slideIndex-1].style.display = "block";  
 }
@@ -104,22 +105,6 @@ function compararSenhas(){
     senhaInput2.style.color = 'hsl(0 100% 40%)';
     senhaInput2.style.outlineColor = 'hsl(0 100% 40%)';
   }
-}
-
-const BuyButton = document.getElementById("buyBtn");
-const BotaoFechar = document.querySelector(".fecharTela")
-const Screen = document.querySelector(".buy-box-screen")
-
-function showScreen(telaCaixa){
-  let telaAberta = document.querySelector(telaCaixa)
-  telaAberta.style.scale = "1";
-  telaAberta.style.pointerEvents = "all";
-}
-
-function FecharTela(telaCaixa){
-  let telaAberta = document.querySelector(telaCaixa)
-  telaAberta.style.scale = "0";
-  telaAberta.style.pointerEvents = "none";
 }
 
 
