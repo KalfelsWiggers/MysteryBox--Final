@@ -1,6 +1,47 @@
 const menuLink = document.getElementById('horizontalMenu');
 const menu = document.getElementById('menu');
 
+document.addEventListener("DOMContentLoaded", function() {
+  var linkSair = document.getElementById("sair");
+
+  linkSair.addEventListener("click", function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do link
+
+    var textoLink = linkSair.innerText;
+    linkSair.innerText = ""; // Remove o texto do link
+
+    var confirmacao = document.createElement("button");
+    confirmacao.innerText = "Deseja mesmo sair?";
+
+    // Estilos CSS para o botão de confirmação
+    confirmacao.style.backgroundColor = "transparent";
+    confirmacao.style.color = "white";
+    confirmacao.style.border = "2px solid hsl(240, 70%, 65%)";
+    confirmacao.style.borderRadius = "1rem";
+    confirmacao.style.cursor = "pointer";
+    confirmacao.style.transition = "all 400ms ease";
+    confirmacao.style.marginTop = "10px";
+
+    confirmacao.addEventListener("mouseover", function() {
+      confirmacao.style.backgroundColor = "hsl(240, 70%, 65%)";
+      confirmacao.style.boxShadow = "0 0 40px hsl(240, 70%, 65%)";
+    });
+
+    confirmacao.addEventListener("mouseout", function() {
+      confirmacao.style.backgroundColor = "transparent";
+      confirmacao.style.boxShadow = "none";
+    });
+
+    confirmacao.addEventListener("click", function() {
+      window.location.href = "index.html"; // Redireciona para outra página
+    });
+
+    linkSair.parentNode.replaceChild(confirmacao, linkSair); // Substitui o link pelo botão
+  });
+});
+
+
+
 let slideIndex = 1
 showSlides(slideIndex);
 
@@ -106,8 +147,6 @@ function compararSenhas(){
     senhaInput2.style.outlineColor = 'hsl(0 100% 40%)';
   }
 }
-
-
 
 
 
