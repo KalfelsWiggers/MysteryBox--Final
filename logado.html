@@ -18,6 +18,7 @@
         </div>
         <div id="icon">
             <a href="#!"><ion-icon name="cart-outline"></ion-icon></a>
+            <nav id="cart"></nav>
         </div>
         <div id="icon">
             <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
@@ -67,87 +68,58 @@
                 <div class="cell"></div>
             </div>
             <div class="infoContainer" id="screenProduct1">
-                <h3>Caixa Família</h3>
-                <div class="infoRow">
-                    <div class="productImage"></div>
-                    <p>Nossa caixa tamanho família serve bem a todas as famílias. <br><br> Valor: R$400,00.
-                    </p>
-                </div>
-                <div class="btnRow">
-                    <button id="buyBtn" onclick="showScreen('.box-1');">Comprar</button>
-                    <button id="closeBtn" onclick="Fechar('screenProduct1');">
-                        Fechar
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
+                <h3 class="name">Caixa Família</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">400,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct1');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
             </div>
         
             <div class="infoContainer" id="screenProduct2">
-                <h3>Caixa Grande</h3>
-                <div class="infoRow">
-                    <div class="productImage"></div>
-                    <p>Para aqueles com grande fome. <br><br> Valor: R$300,00.
-                    </p>
-                </div>
-                <div class="btnRow">
-                    
-                    <button id="buyBtn" onclick="showScreen('.box-2');">Comprar</button>
-                    <button id="closeBtn" onclick="Fechar('screenProduct2');">
-                        Fechar
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
+                <h3 class="name">Caixa Grande</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">300,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct2');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
             </div>
         
             <div class="infoContainer" id="screenProduct3">
-                <h3>Caixa Média</h3>
-                <div class="infoRow">
-                    <div class="productImage"></div>
-                    <p>Para quando seu dia foi mediano. <br><br> Valor: R$200,00.
-                    </p>
-                </div>
-                <div class="btnRow">
-                    
-                    <button id="buyBtn" onclick="showScreen('.box-3');">Comprar</button>
-                    <button id="closeBtn" onclick="Fechar('screenProduct3');">
+                <h3 class="name">Caixa Média</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">200,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct3');">
                         Fechar
                         <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
+                </button>
             </div>
         
             <div class="infoContainer" id="screenProduct4">
-                <h3>Caixa Pequena</h3>
-                <div class="infoRow">
-                    <div class="productImage"></div>
-                    <p>Para quando sua fome está pequena. <br><br> Valor: R$100,00. 
-                    </p>
-                </div>
-                <div class="btnRow">
-                    
-                    <button id="buyBtn" onclick="showScreen('.box-4');">Comprar</button>
-                    <button id="closeBtn" onclick="Fechar('screenProduct4');">
-                        Fechar
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
+                <h3 class="name">Caixa Pequena</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">100,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct4');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button> 
             </div>
         
             <div class="infoContainer" id="screenProduct5">
-                <h3>Caixa Broto</h3>
-                <div class="infoRow">
-                    <div class="productImage"></div>
-                    <p>Experimente uma de nossas brotos. <br><br> Valor: R$50,00.
-                    </p>
-                </div>
-                <div class="btnRow">
-                    
-                    <button id="buyBtn" onclick="showScreen('.box-5');">Comprar</button>
-                    <button id="closeBtn" onclick="Fechar('screenProduct5');">
-                        Fechar
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-                </div>
+                <h3 class="name">Caixa Broto</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">50,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct5');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
             </div>
         </section>
     </main>
