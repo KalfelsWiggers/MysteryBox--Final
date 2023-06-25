@@ -1,3 +1,62 @@
+// Captura todos os botões "Adicionar ao Carrinho"
+const addToCartButtons = document.querySelectorAll('#botaoAdicionar');
+
+// Array para armazenar os itens no carrinho
+const cartItems = [];
+
+// Adiciona um listener de clique para cada botão "Adicionar ao Carrinho"
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', addToCart);
+});
+
+// Função para adicionar um item ao carrinho
+function addToCart(event) {
+  const product = event.target.parentElement;
+  const productName = product.querySelector('.name').innerText;
+  const productPrice = product.querySelector('.price').innerText;
+
+  // Verifica se o item já está no carrinho
+  const existingItem = cartItems.find(item => item.name === productName);
+
+  if (existingItem) {
+      // Se o item já existe, incrementa a quantidade
+      existingItem.quantity++;
+  } else {
+      // Caso contrário, cria um novo objeto item
+      const newItem = {
+          name: productName,
+          price: productPrice,
+          quantity: 1
+      };
+      cartItems.push(newItem);
+  }
+
+  // Atualiza o carrinho exibindo os itens adicionados
+  updateCart();
+}
+
+// Função para atualizar o carrinho
+function updateCart() {
+  const cartElement = document.getElementById('cart');
+  cartElement.innerHTML = '';
+
+  // Percorre o array de itens e exibe cada item no carrinho
+  cartItems.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.innerText = item.name + ' - ' + item.price + ' x ' + item.quantity;
+      itemElement.style.display = 'block';
+      cartElement.appendChild(itemElement);
+  });
+}
+
+
+
+
+
+
+
+
+
 const menuLink = document.getElementById('horizontalMenu');
 const menu = document.getElementById('menu');
 

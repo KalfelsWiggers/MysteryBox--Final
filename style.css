@@ -64,6 +64,25 @@ header{
 #icon a:hover{
     color: var(--clr-pri);
 }
+#cart{
+    position: absolute;
+    background-color: black;
+    border-radius: 1rem;
+    border: 2px solid var(--clr-pri);
+
+    padding: .2px 10px;
+    box-shadow: var(--box-sh);
+    font-size: 1rem;
+    width: fit-content;
+
+    min-height: 30px;
+    display: block;
+
+    white-space: nowrap;
+    left: 110%;
+    bottom: 35%;
+}
+
 #menu {
     /* white-space: nowrap; */
     display: none;
@@ -447,18 +466,25 @@ footer{
 }
 .infoContainer{
     position: absolute;
-    width: 60vmin;
     background-color: black;
     top: 50%;
+    width: 40vmin;
+
     left: 50%;
     transform: translate(-50%, -50%);
-
     transform-origin: top left;
     z-index: 100;
+    
     border-radius: 20px;
-    padding: 10px 22px;
+    padding: 15px;
     text-align: center;
     gap: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     border: 2px solid var(--clr-pri);
     scale: 0;
 }
@@ -467,16 +493,8 @@ footer{
     letter-spacing: 3px;
     margin: 0;
 }
-.infoRow{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 5px;
-    text-align: left;
-    margin-top: 1rem;
-}
 .productImage{
-    width: 28vmin;
+    width: 100%;
     aspect-ratio: 5/7;
     background: url(box.jpg) no-repeat;
     background-size: 100% 100%;
@@ -485,31 +503,22 @@ footer{
     border-radius: 10px;
     opacity: .9;
 }
-.infoRow p{
-    font-size: 1em;
-    font-weight: 200;
-    margin: 0;
-}
-.btnRow{
-    display: grid;
-    grid-template-rows: repeat(2 1fr);
-    row-gap: 15px;
-    margin-top: 1rem;
-}
-
-#buyBtn{
+#botaoAdicionar{
     background-color: transparent;
     color: var(--fc-pri);
     border: 2px solid var(--clr-pri);
     border-radius: 1rem;
+
+    width: 100%;
     cursor: pointer;
     font-size: .9rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
-#buyBtn:hover{
+#botaoAdicionar:hover{
     background-color: var(--clr-pri);
     box-shadow: var(--box-sh2);
 }
@@ -518,6 +527,8 @@ footer{
     border: 2px solid hsl(0, 82%, 55%);
     color: hsl(0, 82%, 55%);
     cursor: pointer;
+
+    width: 100%;
     color: white;
     display: flex;
     justify-content: center;
