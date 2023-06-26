@@ -1,3 +1,71 @@
+// Função para exibir o total dos itens do carrinho e abrir o pop-up
+function showTotal() {
+  // Calcula o total
+  const total = cartItems.reduce((acc, item) => acc + (parseFloat(item.price) * item.quantity), 0);
+
+  // Atualiza o conteúdo do pop-up com os detalhes do pedido
+  const cartItemsElement = document.getElementById('cart-items');
+  cartItemsElement.innerHTML = '';
+  cartItems.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.innerText = item.name + ' - ' + item.price + ' x ' + item.quantity;
+    cartItemsElement.appendChild(itemElement);
+  });
+
+  // Exibe o pop-up e o overlay
+  const popupOverlay = document.getElementById('popup-overlay');
+  const popup = document.getElementById('popup');
+  popupOverlay.style.display = 'block';
+  popup.style.display = 'block';
+
+  // Adiciona um evento de clique ao botão "Confirmar" do pop-up
+  const confirmButton = document.getElementById('confirm-button');
+  confirmButton.addEventListener('click', validateAndProcessOrder);
+
+  // Função para validar e processar o pedido
+  function validateAndProcessOrder() {
+    const paymentInput = document.getElementById('payment');
+    const addressInput = document.getElementById('address');
+    const payment = paymentInput.value.trim();
+    const address = addressInput.value.trim();
+
+    // Validação da forma de pagamento e endereço
+    if (!payment) {
+      alert('Por favor, selecione uma forma de pagamento.');
+      return;
+    }
+
+    if (!address || !validateAddress(address)) {
+      alert('Por favor, insira um endereço válido.');
+      return;
+    }
+
+    // Processamento do pedido
+    processOrder();
+  }
+
+  // Função para validar o endereço
+  function validateAddress(address) {
+    // Lógica para validar o endereço (pode ser substituída pela lógica adequada)
+    return address.length >= 5;
+  }
+
+  // Função para processar o pedido e exibir mensagem de agradecimento
+  function processOrder() {
+    // Lógica para processar o pedido (pode ser substituída pela lógica adequada)
+
+    // Exibe mensagem de agradecimento
+    const popupContent = document.getElementById('popup-content');
+    popupContent.innerHTML = '<h2>Obrigada pela compra!</h2>';
+
+    // Fecha o pop-up e o overlay após 5 segundos
+    setTimeout(() => {
+      popupOverlay.style.display = 'none';
+      popup.style.display = 'none';
+    }, 4000);
+  }
+}
+
 const menuBtn = document.getElementById('carrinho-link');
 const menuCart = document.getElementById('cart');
 
@@ -43,70 +111,27 @@ function addToCart(event) {
   updateCart();
 }
 
-// Função para atualizar o carrinho
+// Função para atualizar o carrinho e exibir o total
 function updateCart() {
   const cartElement = document.getElementById('cart');
   cartElement.innerHTML = '';
+  
+  // Cria o botão "Confirmar Compra"
+  const confirmButton = document.createElement('button');
+  confirmButton.innerText = 'Confirmar Compra';
+
+  // Adiciona um evento de clique ao botão
+  confirmButton.addEventListener('click', showTotal);
+
+  cartElement.appendChild(confirmButton);
 
   // Percorre o array de itens e exibe cada item no carrinho
   cartItems.forEach(item => {
-      const itemElement = document.createElement('div');
-      itemElement.innerText = item.name + ' - ' + item.price + ' x ' + item.quantity;
-      cartElement.appendChild(itemElement);
+    const itemElement = document.createElement('div');
+    itemElement.innerText = item.name + ' - ' + item.price + ' x ' + item.quantity;
+    cartElement.appendChild(itemElement);
   });
 }
-
-
-
-
-
-
-
-
-
-const menuLink = document.getElementById('horizontalMenu');
-const menu = document.getElementById('menu');
-
-document.addEventListener("DOMContentLoaded", function() {
-  var linkSair = document.getElementById("sair");
-
-  linkSair.addEventListener("click", function(event) {
-    event.preventDefault(); // Evita o comportamento padrão do link
-
-    var textoLink = linkSair.innerText;
-    linkSair.innerText = ""; // Remove o texto do link
-
-    var confirmacao = document.createElement("button");
-    confirmacao.innerText = "Deseja mesmo sair?";
-
-    // Estilos CSS para o botão de confirmação
-    confirmacao.style.backgroundColor = "transparent";
-    confirmacao.style.color = "white";
-    confirmacao.style.border = "2px solid hsl(240, 70%, 65%)";
-    confirmacao.style.borderRadius = "1rem";
-    confirmacao.style.cursor = "pointer";
-    confirmacao.style.transition = "all 400ms ease";
-    confirmacao.style.marginTop = "10px";
-
-    confirmacao.addEventListener("mouseover", function() {
-      confirmacao.style.backgroundColor = "hsl(240, 70%, 65%)";
-      confirmacao.style.boxShadow = "0 0 40px hsl(240, 70%, 65%)";
-    });
-
-    confirmacao.addEventListener("mouseout", function() {
-      confirmacao.style.backgroundColor = "transparent";
-      confirmacao.style.boxShadow = "none";
-    });
-
-    confirmacao.addEventListener("click", function() {
-      window.location.href = "index.html"; // Redireciona para outra página
-    });
-
-    linkSair.parentNode.replaceChild(confirmacao, linkSair); // Substitui o link pelo botão
-  });
-});
-
-
 
 let slideIndex = 1
 showSlides(slideIndex);
@@ -144,6 +169,9 @@ function Abrir(tela){
   let telaProduto = document.getElementById(tela);
   telaProduto.style.scale = "1";
 }
+
+const menuLink = document.getElementById('horizontalMenu');
+const menu = document.getElementById('menu');
 
 menuLink.addEventListener('click', function(e) {
   e.preventDefault();

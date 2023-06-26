@@ -15,7 +15,7 @@
             $comando->bindParam(':email', $email);
             $comando->bindParam(':senha', $senha);
             $resultado = $comando->execute();
-            header("Location: logado.html");
+            header("Location: index.html");
         }
     }
 ?>

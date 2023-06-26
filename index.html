@@ -20,6 +20,29 @@
             <a href="#" id="carrinho-link"><ion-icon name="cart-outline"></ion-icon></a>
             <nav id="cart">
             </nav>
+            <!-- Pop-up -->
+            <div id="popup-overlay"></div>
+            <div id="popup">
+            <div id="popup-content">
+                <h2>Detalhes do Pedido</h2>
+                <div id="cart-items"></div>
+                <div id="payment-address">
+                <label for="payment">Forma de Pagamento:</label>
+                <select id="payment">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="cartao de credito">Cartão de Crédito</option>
+                    <option value="cartao de debito">Cartão de Débito</option>
+                    <option value="pix">PIX</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address">
+                </div>
+                <div style="text-align: center;">
+                    <button id="confirm-button">Confirmar</button>
+                </div>
+            </div>
+            </div>
         </div>
         <div id="icon">
             <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
