@@ -66,21 +66,23 @@ header{
 }
 #cart{
     position: absolute;
-    background-color: black;
-    border-radius: 1rem;
-    border: 2px solid var(--clr-pri);
+    background-color: hsla(0 0% 0% / .7);
 
-    padding: .2px 10px;
+    padding: 5px 10px;
     box-shadow: var(--box-sh);
     font-size: 1rem;
     width: fit-content;
 
-    min-height: 30px;
+    max-height: 125px;
     display: block;
+    scale: 0;
 
     white-space: nowrap;
     left: 110%;
-    bottom: 35%;
+    top: 55%;
+}
+#cart.open2{
+    scale: 1;
 }
 
 #menu {

@@ -1,3 +1,11 @@
+const menuBtn = document.getElementById('carrinho-link');
+const menuCart = document.getElementById('cart');
+
+menuBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  menuCart.classList.toggle('open2');
+});
+
 // Captura todos os botões "Adicionar ao Carrinho"
 const addToCartButtons = document.querySelectorAll('#botaoAdicionar');
 
@@ -44,7 +52,6 @@ function updateCart() {
   cartItems.forEach(item => {
       const itemElement = document.createElement('div');
       itemElement.innerText = item.name + ' - ' + item.price + ' x ' + item.quantity;
-      itemElement.style.display = 'block';
       cartElement.appendChild(itemElement);
   });
 }
