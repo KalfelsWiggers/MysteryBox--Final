@@ -23,6 +23,13 @@ if (isset($_GET["logout"])) {
     <title>MysteryBOX - Se Surpreenda</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="../style/style.css">
+    <script>
+        document.getElementById("sair").addEventListener("click", function() {
+            if (confirm("Deseja realmente sair?")) {
+                window.location.href = "tela-principal.php?logout=true";
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
