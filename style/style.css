@@ -30,7 +30,7 @@ body{
     font-size: 1.075em;
     color: var(--fc-pri);
 
-    background: url(bg.jpg) no-repeat;
+    background: url(../images/bg.jpg) no-repeat;
     background-size: auto;
     background-position: center;
     overflow-x: hidden;
@@ -360,13 +360,13 @@ section{
     border: 2px solid var(--clr-pri);
     border-radius: 1rem;
 
-    background: url(box.jpg) no-repeat;
+    background: url(../images/box.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     box-shadow: var(--box-sh);
 }
 .cell:nth-child(6){
-    background: url(plus.jpg) no-repeat;
+    background: url(../images/plus.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -579,7 +579,7 @@ footer{
 .productImage{
     width: 100%;
     aspect-ratio: 5/7;
-    background: url(box.jpg) no-repeat;
+    background: url(../images/box.jpg) no-repeat;
     background-size: 100% 100%;
     object-fit: cover;
     border: 2px solid var(--clr-pri);

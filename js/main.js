@@ -133,7 +133,7 @@ function updateCart() {
   });
 }
 
-let slideIndex = 1
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlide(n){
