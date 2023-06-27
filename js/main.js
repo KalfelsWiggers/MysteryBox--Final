@@ -19,6 +19,11 @@ function showTotal() {
     cartItemsElement.appendChild(itemElement);
   });
 
+  // Exibe o total
+  const totalElement = document.createElement('div');
+  totalElement.innerText = 'Total: R$ ' + total.toFixed(2);
+  cartItemsElement.appendChild(totalElement);
+
   // Exibe o pop-up e o overlay
   const popupOverlay = document.getElementById('popup-overlay');
   const popup = document.getElementById('popup');
