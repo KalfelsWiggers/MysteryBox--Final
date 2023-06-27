@@ -1,3 +1,10 @@
+/*Função de finalizar compra
+
+  -aparecer o popup;
+  -aparecer os itens que voce escolheu;
+
+*/
+
 // Função para exibir o total dos itens do carrinho e abrir o pop-up
 function showTotal() {
   // Calcula o total
@@ -66,13 +73,15 @@ function showTotal() {
   }
 }
 
-const menuBtn = document.getElementById('carrinho-link');
-const menuCart = document.getElementById('cart');
 
-menuBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-  menuCart.classList.toggle('open2');
-});
+
+
+/*Funções de carrinho
+
+  -adicionar itens;
+  -atualizar display;
+
+*/
 
 // Captura todos os botões "Adicionar ao Carrinho"
 const addToCartButtons = document.querySelectorAll('#botaoAdicionar');
@@ -133,6 +142,16 @@ function updateCart() {
   });
 }
 
+
+
+
+/*Slider
+
+  -mostrar slide;
+  -passar slides;
+
+*/
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -161,14 +180,14 @@ function showSlides(n){
 }
 
 
-function Fechar(tela){
-  document.getElementById(tela).style.scale = "0";
-}
 
-function Abrir(tela){
-  let telaProduto = document.getElementById(tela);
-  telaProduto.style.scale = "1";
-}
+
+/* Funções de abrir tela
+
+  -menus;
+  -telas de produtos;
+
+*/
 
 const menuLink = document.getElementById('horizontalMenu');
 const menu = document.getElementById('menu');
@@ -187,7 +206,31 @@ anchor.addEventListener('click', function(e) {
   menu2.classList.toggle('open2');
 });
 
-//verificações
+const menuBtn = document.getElementById('carrinho-link');
+const menuCart = document.getElementById('cart');
+
+menuBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  menuCart.classList.toggle('open2');
+});
+
+function Abrir(tela){
+  document.getElementById(tela).style.scale = "1";
+}
+
+function Fechar(tela){
+  document.getElementById(tela).style.scale = "0";
+}
+
+
+
+
+/* verificações
+
+  -email;
+  -senhas;
+
+*/
 
 const emailInput = document.getElementById('email');
 
@@ -201,12 +244,6 @@ emailInput.addEventListener('input', () =>{
     emailInput.style.outlineColor = 'hsl(0 100% 50%)'; // E-mail válido, altera a cor do texto para verde
     emailInput.style.color = 'hsl(0 100% 50%)';  }
 });
-
-function isValidEmail(email) {
-  // Expressão regular para validar um endereço de e-mail
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
 
 function isValidEmail(verfificacaoEmail) {
   // Expressão regular para validar um endereço de e-mail
@@ -226,11 +263,12 @@ function verificarSenha() {
     senhaInput.style.outlineColor = 'hsl(125 100% 40%)'; // Senha válida, altera a cor do texto para verde
   }
 }
+
 function compararSenhas(){
   const senhaInput1 = document.getElementById("senhaInput");
   const senhaInput2 = document.getElementById("senhaInput2");
 
-  const senha1 = senhaInput.value;
+  const senha1 = senhaInput1.value;
   const senha2 = senhaInput2.value;
 
   if (senha1 === senha2) {
