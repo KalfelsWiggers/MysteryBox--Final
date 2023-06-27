@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MysteryBOX - Se Surpreenda</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div id="icon">
+            <a href="#destino1"><ion-icon name="home-outline"></ion-icon></a>
+        </div>
+        <div id="icon">
+            <a href="#destino2"><ion-icon name="cube-outline"></ion-icon></a>
+        </div>
+        <div id="icon">
+            <a href="#" id="carrinho-link"><ion-icon name="cart-outline"></ion-icon></a>
+            <nav id="cart">
+            </nav>
+            <!-- Pop-up -->
+            <div id="popup-overlay"></div>
+            <div id="popup">
+            <div id="popup-content">
+                <h2>Detalhes do Pedido</h2>
+                <div id="cart-items"></div>
+                <div id="payment-address">
+                <label for="payment">Forma de Pagamento:</label>
+                <select id="payment">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="cartao de credito">Cartão de Crédito</option>
+                    <option value="cartao de debito">Cartão de Débito</option>
+                    <option value="pix">PIX</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address">
+                </div>
+                <div style="text-align: center;">
+                    <button id="confirm-button">Confirmar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="icon">
+            <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
+            <nav id="menu">
+                <ul>
+                  <li><a id="anchor">Criar Conta</a></li>
+                </ul>
+                <nav id="menu2">
+                    <h2 id="h2UC">CriarConta</h2>
+                    <form method="POST" action="crud.php">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+    
+                        <label for="senhaInput">Senha:</label>
+                        <input type="password" id="senhaInput" name="senha" oninput="verificarSenha()">
+    
+                        <label for="senhaInput2">Confirmar Senha:</label>
+                        <input type="password" id="senhaInput2" oninput="compararSenhas();">
+                        
+                        <input type="submit" value="Criar" id="CreateBtn" name="submit">
+                        <!-- <button id="CreateBtn">Criar</button> -->
+                    </form>
+                    <div id="formRow">
+                        <div>
+                            <input type="checkbox" id="check"><label for="check">Lembre de mim</label>
+                        </div>
+                        <a href="#">Entrar</a>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <main id="destino1">
+        <section>
+            <div id="name">Mystery<span>BOX</span></div>
+            <div id="txt">Se surpreenda</div>
+        </section>
+        <br><br>
+        <section>
+            <div class="slide-container">
+                <div class="bg"></div>
+                <button class="arrow left" onclick="plusSlide(-1)">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </button>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <div class="mySlide">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                </div>
+                <button class="arrow right" onclick="plusSlide(1)">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+            </div>
+        </section>
+        <section  id="destino2" style="position: relative;">
+            <h2 id="name">CAIXAS</h2>
+            <div id="productContainer">
+                <div class="cell" id="cell1" onclick="Abrir('screenProduct1');"></div>
+                <div class="cell" onclick="Abrir('screenProduct2');"></div>
+                <div class="cell" onclick="Abrir('screenProduct3');"></div>
+                <div class="cell" onclick="Abrir('screenProduct4');"></div>
+                <div class="cell" onclick="Abrir('screenProduct5');"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="infoContainer" id="screenProduct1">
+                <h3 class="name">Caixa Família</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">400,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct1');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct2">
+                <h3 class="name">Caixa Grande</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">300,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct2');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct3">
+                <h3 class="name">Caixa Média</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">200,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct3');">
+                        Fechar
+                        <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+        
+            <div class="infoContainer" id="screenProduct4">
+                <h3 class="name">Caixa Pequena</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">100,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct4');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button> 
+            </div>
+        
+            <div class="infoContainer" id="screenProduct5">
+                <h3 class="name">Caixa Broto</h3>
+                <div class="productImage"></div>
+                <p>Valor: <span class="price">50,00.</span></p>
+                <button id="botaoAdicionar" >Adicionar</button>
+                <button id="closeBtn" onclick="Fechar('screenProduct5');">
+                    Fechar
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div id="column1">
+            <div id="fotIcons">
+                <div id="icons">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <div id="icons">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div id="column2">
+            <label for="fotBtn">Pergunte:</label>
+            <button id="fotBtn">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+            </button>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script src="../js/main.js"></script>
+</html>
