@@ -22,7 +22,7 @@ if(isset($_POST["submit"])) {
             exit();
         } else {
             // A conta não existe, retorna para a tela principal
-            header("Location: tela-principal.php");
+            header("Location: pagina.html");
             exit();
         }
     }
