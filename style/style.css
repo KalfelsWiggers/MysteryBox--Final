@@ -451,9 +451,10 @@ section{
     opacity: 0;
 }
 .cell:nth-child(6):after{
-    content: 'Mais em breve!';
+    content: 'Caixas para alérgicos em breve!';
     position: absolute;
     border-radius: inherit;
+    text-align: center;
 
     display: flex;
     justify-content: center;
@@ -561,7 +562,7 @@ footer{
     position: absolute;
     background-color: black;
     top: 50%;
-    width: 40vmin;
+    width: 30vmin;
 
     left: 50%;
     transform: translate(-50%, -50%);

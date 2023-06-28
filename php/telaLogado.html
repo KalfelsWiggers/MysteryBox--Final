@@ -1,19 +1,3 @@
-<?php
-session_start(); // Inicia a sessão
-
-// Verifica se o usuário não está logado
-if (!isset($_SESSION["email"])) {
-    header("Location: tela-principal.php");
-    exit();
-}
-
-// Encerra a sessão ao clicar no botão "Sair"
-if (isset($_GET["logout"])) {
-    session_destroy();
-    header("Location: tela-principal.php");
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,11 +8,7 @@ if (isset($_GET["logout"])) {
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="../style/style.css">
     <script>
-        document.getElementById("sair").addEventListener("click", function() {
-            if (confirm("Deseja realmente sair?")) {
-                window.location.href = "tela-principal.php?logout=true";
-            }
-        });
+        
     </script>
 </head>
 <body>
@@ -71,7 +51,7 @@ if (isset($_GET["logout"])) {
             <a id="horizontalMenu"><ion-icon name="person-circle-outline"></ion-icon></a>
             <nav id="menu">
                 <ul>
-                  <li><a id="sair" name="logout">sair</a></li>
+                  <li><a href="./pagina.html">Sair</a></li>
                 </ul>
             </nav>
         </div>
@@ -89,10 +69,15 @@ if (isset($_GET["logout"])) {
                     <ion-icon name="arrow-back-outline"></ion-icon>
                 </button>
                 <div class="mySlide">
-                    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                    <div class="slide-text">
+                        <p style="font-size: calc(var(--slide-font) * 1.5);">Olá, bem vindo</p>
+                        <p>Somos um empresa que fornece caixas de comida surpresa</p>
+                        <p>Você escolha o tamanho da sua fome e o quanto quer se surpreender!</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
                 </div>
                 <div class="mySlide">
-                    <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
                 </div>
                 <div class="mySlide">
                     <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">

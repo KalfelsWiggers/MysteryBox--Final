@@ -18,11 +18,17 @@ if(isset($_POST["submit"])) {
         if($comando->rowCount() > 0) {
             // A conta já existe
             $_SESSION["email"] = $email; // Inicia a sessão com o email do usuário
-            header("Location: telaLogado.php");
+            header("Location: telaLogado.html");
             exit();
         } else {
-            // A conta não existe, retorna para a tela principal
-            header("Location: pagina.html");
+            // A conta não existe, cria uma nova conta
+            $comando = $pdo->prepare("INSERT INTO usuario (email_usuario, senha_usuario) VALUES (:email, :senha)");
+            $comando->bindParam(':email', $email);
+            $comando->bindParam(':senha', $senha);
+            $comando->execute();
+
+            $_SESSION["email"] = $email; // Inicia a sessão com o email do usuário
+            header("Location: telaLogado.html");
             exit();
         }
     }
