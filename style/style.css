@@ -301,6 +301,16 @@ section{
 .mySlide{
     display: none;
 }
+.slide-text{
+    --slide-font: 2.5vmin;
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0 0 5px black;
+    font-size: var(--slide-font);
+}
 .mySlide img{
     width: 100%;
     background-position: center;
@@ -648,6 +658,9 @@ footer{
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
+    }
+    .slide-text{
+        --slide-font: 3vmin;
     }
 }
 @media  screen and (max-width: 360px) {
